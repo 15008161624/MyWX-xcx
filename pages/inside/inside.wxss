@@ -1,0 +1,21 @@
+
+.pic{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rpx;
+}
+.picture{
+    width: 730rpx;
+    
+}
+.tit{
+    text-align: center;
+    font-size: 36rpx;
+    letter-spacing: 30rpx;
+    line-height: 72rpx;
+}
+.tex{
+    text-align: right;
+    margin-top: 15rpx;
+    margin-right: 30rpx;
+}

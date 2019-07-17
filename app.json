@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/zhazhi/zhazhi",  
+    "pages/first/first",
+    "pages/index/index",
+    "pages/inside/inside",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00b26a",
+    "navigationBarTitleText": "Come on",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

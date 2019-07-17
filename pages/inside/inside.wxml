@@ -1,0 +1,12 @@
+<!-- pages/inside/inside.wxml -->
+<!-- <text>pages/inside/inside.wxml</text> -->
+<view>
+    <view class="pic">
+        <image class="picture" mode="widthFix" src="/image/picture.png" />
+        <text class="tit">为何不浪漫是罪名为</text>
+        <text class="tit">为何不浪漫是罪名为</text>
+    </view>
+    <view class="tex">
+        <text>--你是大大小</text>
+    </view>
+</view>

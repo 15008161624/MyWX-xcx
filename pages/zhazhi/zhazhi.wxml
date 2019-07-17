@@ -1,0 +1,43 @@
+<!-- pages/zhazhi/zhazhi.wxml -->
+<!-- <text>pages/zhazhi/zhazhi.wxml</text> -->
+<view>
+    <view class="f1 t1">
+        <text>十月七日</text>
+    </view>
+    <view class="f2 t1 ">
+        <text>点评人：小胡子，我有一个小毛驴嘎嘎</text>
+    </view>
+    <view class="f3 t1">
+        <image mode="widthFix" src="/image/list/recommend-image.png" />
+    </view>
+    <view class="f4 ">
+        <text>+</text>
+        <text>女性穿搭</text>
+        <text>男性穿搭</text>
+        <text>心理</text>
+        <text>深度阅读</text>
+        <text>人身整理术</text>
+        <text>读书</text>
+        <text>日韩剧</text>
+        <text>···</text>
+    </view>
+</view>
+<view class="mm">
+    <view class="m">
+        <view class="m1">
+            <image mode="widthFix" src="/image/avatar.png" />
+            <text>neffty</text>
+            <text>等96人马克了</text>
+        </view>
+        <view class="m2">
+            <image mode="widthFix" src="/image/list/article/1.png" />
+            <text>不论之吻？《吻》背后的故事</text>
+        </view>
+        <view class="m3">
+            <text>深度阅读</text>
+            <image mode="widthFix" src="/image/icon/3.png" />
+            <image mode="widthFix" src="/image/icon/1.png" />
+            <image mode="widthFix" src="/image/icon/2.png" />
+        </view>
+    </view>
+</view>

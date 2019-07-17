@@ -1,0 +1,11 @@
+<!--pages/first/first.wxml-->
+<!-- <text>pages/first/first.wxml</text> -->
+<view >
+    <view class="f1">
+      <image class="pic" mode="widthFix" src="/image/avatar.png" />
+      <text class="f2">小小胡子</text>
+    </view>
+    <view class="f1 " >
+        <text class="f3" bind:tap="first">欢迎来到我的小程序</text>
+    </view>
+</view>
