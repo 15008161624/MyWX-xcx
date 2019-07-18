@@ -2,24 +2,62 @@
 <!-- <text>pages/zhazhi/zhazhi.wxml</text> -->
 <view>
     <view class="f1 t1">
-        <text>十月七日</text>
+        <text>{{recommend.date}}</text>
     </view>
     <view class="f2 t1 ">
-        <text>点评人：小胡子，我有一个小毛驴嘎嘎</text>
+        <text>{{recommend.title}}</text>
     </view>
     <view class="f3 t1">
-        <image mode="widthFix" src="/image/list/recommend-image.png" />
+        <image mode="widthFix" src="{{recommend.imgSrc}}" />
     </view>
     <view class="f4 ">
         <text>+</text>
-        <text>女性穿搭</text>
-        <text>男性穿搭</text>
-        <text>心理</text>
-        <text>深度阅读</text>
-        <text>人身整理术</text>
-        <text>读书</text>
-        <text>日韩剧</text>
+        <text wx:for="{{markType}}" wx:key="typeId">{{item.type}}</text>
+        
         <text>···</text>
+    </view>
+</view>
+<view class="mm" wx:for="{{articleList}}" wx:key="id" >
+    <view class="m">
+        <view class="m1">
+            <image mode="widthFix" src="{{item.markPeopleAvatar}}" />
+            <text>{{item.markPeople}}</text>
+            <text>等</text>
+            <text>{{item.markCount}}</text>
+            <text>人马克了</text>
+        </view>
+        <view class="m2">
+            <image mode="widthFix" src="{{item.articleImgSrc}}" />
+            <text>{{item.articleTitle}}</text>
+        </view>
+        <view class="m3">
+            <text>{{item.articleType}}</text>
+            <image  bindtap="second" data-articleIndex="{{index}}" wx:if="{{listLike[index]}}" src="/image/icon/3.png" />
+            <image  bindtap="second" data-articleIndex="{{index}}" wx:else src="/image/icon/4.png" />
+            <button open-type="share">
+               <image  src="/image/icon/1.png" />
+            </button>
+            <image  bindtap="firsttap" data-articleType="{{item.articleType}}" src="/image/icon/2.png" />
+        </view>
+    </view>
+</view>
+<!-- <view class="mm">
+    <view class="m">
+        <view class="m1">
+            <image mode="widthFix" src="/image/avatar.png" />
+            <text>neffty</text>
+            <text>等96人马克了</text>
+        </view>
+        <view class="m2">
+            <image mode="widthFix" src="/image/list/article/1.png" />
+            <text>不论之吻？《吻》背后的故事</text>
+        </view>
+        <view class="m3">
+            <text>深度阅读</text>
+            <image mode="widthFix" src="/image/icon/3.png" />
+            <image mode="widthFix" src="/image/icon/1.png" />
+            <image mode="widthFix" src="/image/icon/2.png" />
+        </view>
     </view>
 </view>
 <view class="mm">
@@ -41,3 +79,22 @@
         </view>
     </view>
 </view>
+<view class="mm">
+    <view class="m">
+        <view class="m1">
+            <image mode="widthFix" src="/image/avatar.png" />
+            <text>neffty</text>
+            <text>等96人马克了</text>
+        </view>
+        <view class="m2">
+            <image mode="widthFix" src="/image/list/article/1.png" />
+            <text>不论之吻？《吻》背后的故事</text>
+        </view>
+        <view class="m3">
+            <text>深度阅读</text>
+            <image mode="widthFix" src="/image/icon/3.png" />
+            <image mode="widthFix" src="/image/icon/1.png" />
+            <image mode="widthFix" src="/image/icon/2.png" />
+        </view>
+    </view>
+</view> -->

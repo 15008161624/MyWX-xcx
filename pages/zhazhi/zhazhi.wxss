@@ -46,9 +46,10 @@
     width: 66rpx;
     border-radius: 50%;
     vertical-align: middle;
+    margin-right: 10rpx;
 }
 .m1{
-    padding:10rpx  20rpx;
+    padding: 20rpx;
     font-size: 28rpx;
 }
 
@@ -57,21 +58,21 @@
 }
 .m2{
     text-align: center;
-    margin: 20rpx 0;
+    padding: 0 0 20rpx;
     font-size: 38rpx;
 }
 .mm{
     background-color: #ebebeb;
-    padding: 30rpx ;
+    padding: 30rpx 30rpx 0;
 }
 .m{
     background-color: #fff;
     padding-bottom: 40rpx;
 }
 .m3 image{
-    width: 50rpx;
+    width: 40rpx;
+    height: 40rpx;
     float: right;
-    margin-right:25rpx; 
 }
 .m3 text{
     border: 1rpx solid #000;
@@ -80,4 +81,13 @@
 }
 .m3{
     margin-left: 25rpx;
+    margin-right:20rpx; 
+}
+.m3 button{
+    background: transparent;
+    display: inline-block;
+    float: right;
+}
+.m3 button::after{
+   border: none;
 }
