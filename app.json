@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/zhazhi/zhazhi",  
+    "pages/zhazhi/zhazhi",
+    "pages/type/type",  
+    
     "pages/first/first",
     "pages/index/index",
     "pages/inside/inside",
