@@ -12,7 +12,7 @@
     </view>
     <view class="f4 ">
         <text>+</text>
-        <text wx:for="{{markType}}" wx:key="typeId">{{item.type}}</text>
+        <text wx:for="{{markType}}" bindtap="type" data-articleTypeId="{{item.typeId}}" wx:key="typeId">{{item.type}}</text>
         
         <text>···</text>
     </view>

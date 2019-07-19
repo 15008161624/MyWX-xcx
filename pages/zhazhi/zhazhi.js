@@ -54,6 +54,8 @@ Page({
       })
       wx.setStorageSync('listLike',listLike)
     },
+
+
   firsttap:function(e){
     // console.log(e.currentTarget.dataset.articletype)
     wx.showActionSheet({
@@ -65,6 +67,14 @@ Page({
     })
    },
 
+
+   type:function(e){
+     console.log(e)
+     var typeid = e.currentTarget.dataset.articletypeid;
+     wx.navigateTo({
+      url: '/pages/type/type?typeid='+ typeid,
+    })
+   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

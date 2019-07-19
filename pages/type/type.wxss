@@ -1,0 +1,39 @@
+/* pages/type/type.wxss */
+@import "../common.wxss";
+.q{
+   
+    background-color: #ebebeb;
+    padding: 0 0 60rpx;
+}
+.q1 image{
+    width: 730rpx;  
+}
+
+.q2{
+    box-sizing: border-box;
+    position: absolute;
+    width: 600rpx;
+    background-color: #fff;
+    margin-left: 80rpx;
+    margin-top: -70rpx;
+    padding: 25rpx;
+    margin-bottom: 30rpx;
+}
+.q2 image{
+    padding: 15rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.q2{
+    font-size: 30rpx;
+}
+.q3{
+    position: absolute;
+    right: 20rpx;
+    bottom: -10rpx;
+}
+.q4{
+    /* background-color: #ebebeb;
+    padding: 30rpx 30rpx 0; */
+}

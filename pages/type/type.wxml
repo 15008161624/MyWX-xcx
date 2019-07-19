@@ -1,0 +1,39 @@
+<!-- pages/type/type.wxml -->
+<!-- <text>pages/type/type.wxml</text> -->
+<view class="q">
+    <view class="q1">
+        <image mode="widthFix" src="{{titleInfo.imgSrc}}" />
+    </view>
+    <view class="q2">
+        <text>{{titleInfo.title}}</text>
+        <view class="q3">
+            <image src="/image/icon/1.png" />
+            <image src="/image/icon/2.png" />
+        </view>
+    </view>
+    
+</view>
+<view class="mm" wx:for="{{articleList}}" wx:key="id">
+        <view class="m">
+            <view class="m1">
+                <image mode="widthFix" src="{{item.markPeopleAvatar}}" />
+                <text>{{item.markPeople}}</text>
+                <text>等</text>
+                <text>{{item.markCount}}</text>
+                <text>人马克了</text>
+            </view>
+            <view class="m2">
+                <image mode="widthFix" src="{{item.articleImgSrc}}" />
+                <text>{{item.articleTitle}}</text>
+            </view>
+            <view class="m3">
+                <text>{{item.publishTime}}</text>
+                <image bindtap="second" data-articleIndex="{{index}}" wx:if="{{listLike[index]}}" src="/image/icon/3.png" />
+                <image bindtap="second" data-articleIndex="{{index}}" wx:else src="/image/icon/4.png" />
+                <button open-type="share">
+                    <image src="/image/icon/1.png" />
+                </button>
+                <image bindtap="firsttap" data-articleType="{{item.articleType}}" src="/image/icon/2.png" />
+            </view>
+        </view>
+    </view>
