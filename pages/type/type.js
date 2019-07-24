@@ -38,6 +38,14 @@ Page({
       }
     })
   },
+
+  readPage:function(e){
+      console.log(e)
+      var id = e.currentTarget.dataset.atid;
+      wx.navigateTo({
+        url: '/pages/readPage/readPage?typeid='+ id,
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

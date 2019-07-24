@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/zhazhi/zhazhi",
-    "pages/type/type",  
     
+    "pages/zhazhi/zhazhi",
+    "pages/type/type",
     "pages/first/first",
     "pages/index/index",
     "pages/inside/inside",
+    "pages/readPage/readPage",
     "pages/logs/logs"
     
   ],

@@ -23,8 +23,8 @@
                 <text>人马克了</text>
             </view>
             <view class="m2">
-                <image mode="widthFix" src="{{item.articleImgSrc}}" />
-                <text>{{item.articleTitle}}</text>
+                <image bind:tap="readPage" data-atid="{{item.id}}"  mode="widthFix" src="{{item.articleImgSrc}}" />
+                <text bind:tap="readPage" data-atid="{{item.id}}">{{item.articleTitle}}</text>
             </view>
             <view class="m3">
                 <text>{{item.publishTime}}</text>

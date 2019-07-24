@@ -1,0 +1,75 @@
+<!-- pages/readPage/readPage.wxml -->
+<!-- <text>pages/readPage/readPage.wxml</text> -->
+<view>
+    <view>
+        <text class="r1">{{titleInfo.title}}</text>
+    </view>
+    <view>
+        <text class="r11">{{titleInfo.author}}</text>
+        <text class="r11">{{titleInfo.publishTime}}</text>
+    </view>
+
+    <view class="r2" >
+        <swiper wx:if="{{titleInfo.banner[0]}}" class="r22" indicator-dots="{{true}}" autoplay="{{true}}" interval="2000">
+            <swiper-item  wx:for="{{titleInfo.banner}}">
+                <image src="{{item}}" />
+            </swiper-item>
+        </swiper>
+
+        <video wx:elif="{{titleInfo.video.src}}" 
+               poster="{{titleInfo.video.poster}}"
+               controls="{{true}}"
+               src="{{titleInfo.video.src}}" 
+               duration="{{titleInfo.video.duration}}"
+                >
+        </video>
+
+        <view class="cont" wx:elif="{{titleInfo.audio.src}}">
+            <view class="left">
+                <image bind:tap="music" wx:if="{{play}}" src="/image/icon/5.png" />
+                <image bind:tap="music" wx:else src="/image/icon/6.png" />
+            </view>
+            <view class="right">
+                <view class="right1">
+                    <text>{{titleInfo.audio.audioTitle}}</text>
+                </view>
+                <view class="right2">
+                    <text>{{titleInfo.audio.title}}</text>
+                </view>
+                <view class="right3">
+                     <view class="progress"></view>
+                    <progress  percent="60"
+                                stroke-width="3"
+                                color="#09BB07"/>
+                    
+                </view>
+                <view class="right4">
+                    <text>0</text>
+                    <text>{{titleInfo.audio.duration}}</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+
+
+    <view class="r3"> 
+        <text decode="{{true}}">{{filter(titleInfo.content)}}</text>
+    </view>
+    <view>
+        <text class="r4">阅读量</text>
+        <text class="r4">{{titleInfo.readNum}}</text>
+    </view>
+</view>
+
+<wxs module="filter">
+    var filter = function(text){
+       if(!text){
+           return
+       }
+       var a = getRegExp('\\n', "g");
+       return text.replace(a,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+    }
+    module.exports = filter
+</wxs>

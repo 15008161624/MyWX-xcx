@@ -1,0 +1,89 @@
+/* pages/readPage/readPage.wxss */
+.r1{
+    font-size: 50rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15rpx 0;
+}
+.r11{
+    font-size: 26rpx;
+    padding-left: 20rpx;
+}
+.r4{
+    font-size: 28rpx;
+    padding: 0 0 20rpx 20rpx;
+}
+.r3{
+    margin: 15rpx;
+    text-indent: 2rem;
+    text-align: left;
+    
+}
+.r3 text{
+    font-size: 32rpx;
+}
+.r22{
+    width: 750rpx;
+    height: 500rpx;
+   
+}
+.r22 image{
+    width: 100%;
+    height: 100%;
+}
+.r2{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+    border: 1rpx solid #f2f2f2;
+    background-color: #fdfdfd;
+    padding: 30rpx  50rpx;
+    
+}
+.left {
+   position: absolute;
+   left: 50rpx;
+}
+.left image{
+    width: 80rpx;
+    height: 80rpx;
+}
+.right{
+    width: 500rpx;
+    position: relative; 
+    margin-left: 100rpx;
+}
+.progress{
+    position: relative;
+    background-color: #00b26a;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    margin-bottom: -15rpx;
+}
+.right3{
+    position: relative;
+    width: 500rpx;
+}
+.right1{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.right2{
+    font-size: 28rpx;
+    margin: 10rpx 0 ;
+}
+.right4{
+    margin: 10rpx 0 0 0;
+    font-size: 30rpx;
+}
+.right4 text:last-of-type{
+    float: right;
+}
