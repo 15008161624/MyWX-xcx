@@ -6,6 +6,9 @@ Page({
    */
   data: {
       play:false,
+      currentTime:0,
+      progress:0,
+      length:0
   },
 
   /**
@@ -73,8 +76,27 @@ Page({
         })
       })
 
-    },
+      var that = this;
+      var lastTime = this.data.titleInfo.audio.duration
+      
+      
 
+      audio.onTimeUpdate(function(){
+       
+      var currentTime = audio.currentTime.toFixed()
+      var progress = (currentTime / lastTime) *100
+       var length = progress / 100 *500
+        // console.log(audio.currentTime)
+        that.setData({
+        
+          currentTime:currentTime,
+          progress:progress,
+          length:length
+        })
+      })
+    },
+  
+    
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

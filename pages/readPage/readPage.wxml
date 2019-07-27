@@ -1,5 +1,6 @@
 <!-- pages/readPage/readPage.wxml -->
 <!-- <text>pages/readPage/readPage.wxml</text> -->
+
 <view>
     <view>
         <text class="r1">{{titleInfo.title}}</text>
@@ -37,15 +38,15 @@
                     <text>{{titleInfo.audio.title}}</text>
                 </view>
                 <view class="right3">
-                     <view class="progress"></view>
-                    <progress  percent="60"
+                     <view class="progress" style="left:{{length+'rpx'}}"></view>
+                    <progress  percent="{{progress}}"
                                 stroke-width="3"
                                 color="#09BB07"/>
                     
                 </view>
                 <view class="right4">
-                    <text>0</text>
-                    <text>{{titleInfo.audio.duration}}</text>
+                    <text>{{format(currentTime)}}</text>
+                    <text>{{format(titleInfo.audio.duration)}}</text>
                 </view>
             </view>
         </view>
@@ -71,5 +72,21 @@
        var a = getRegExp('\\n', "g");
        return text.replace(a,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
     }
-    module.exports = filter
+
+    module.exports = filter   
+</wxs>
+
+<wxs module="format">
+   var format = function (sec) {
+         var minute = Math.floor( sec / 60)
+         var second = sec % 60
+           minute = minute < 10 ? '0' + minute : minute
+           second = second < 10 ? '0' + second : second
+        
+          return minute + ':' + second
+     }
+    
+    module.exports = format
+    
+
 </wxs>
